@@ -31,16 +31,16 @@ open class AlertController: NSViewController {
     open var customizeVisualEffectView: ((_ view: NSVisualEffectView) -> Void)? = nil
 
     // view for buttons
-    @IBOutlet weak var visualEffectView: NSVisualEffectView!
-    @IBOutlet weak var buttonsView: NSView!
-    @IBOutlet weak var textFieldsView: NSView!
-    @IBOutlet weak var textFieldsHeight: NSLayoutConstraint!
+    @IBOutlet public weak var visualEffectView: NSVisualEffectView!
+    @IBOutlet public weak var buttonsView: NSView!
+    @IBOutlet public weak var textFieldsView: NSView!
+    @IBOutlet public weak var textFieldsHeight: NSLayoutConstraint!
     //open var textFieldHeight: CGFloat = 20
 
-    @IBOutlet weak var titleView: NSTextField!
-    @IBOutlet weak var imageView: NSImageView!
-    @IBOutlet weak var messageView: NSTextField!
-    @IBOutlet weak var logoImageView: NSImageView!
+    @IBOutlet public weak var titleView: NSTextField!
+    @IBOutlet public weak var imageView: NSImageView!
+    @IBOutlet public weak var messageView: NSTextField!
+    @IBOutlet public weak var logoImageView: NSImageView!
 
     // Creates and returns a view controller for displaying an alert to the user.
     public init(title: String?, message: String?, preferredStyle: AlertController.Style) {
