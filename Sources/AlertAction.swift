@@ -49,7 +49,7 @@ import Foundation
         // updateButton
         button.action = #selector(AlertAction.perform as (AlertAction) -> () -> ())
         button.target = self
-        button.identifier = title
+        button.identifier = NSUserInterfaceItemIdentifier(rawValue: title)
         self.title = title
         self.style = style
     }
@@ -62,7 +62,7 @@ import Foundation
 
 extension AlertAction {
     // Styles to apply to action buttons in an alert.
-    public typealias Style = NSBezelStyle
+    public typealias Style = NSButton.BezelStyle
 
     // TODO allow align button right or left
     enum Align {
@@ -73,7 +73,7 @@ extension AlertAction {
 }
 
 extension AlertAction.Style {
-    public static let `default` = NSBezelStyle.rounded
+    public static let `default` = NSButton.BezelStyle.rounded
 }
 
 
