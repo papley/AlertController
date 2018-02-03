@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "NSAlertController"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "Share information between your applications and extensions"
   s.homepage     = "https://github.com/phimage/AlertController"
 
