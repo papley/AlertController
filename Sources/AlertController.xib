@@ -54,7 +54,7 @@
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AlertCautionIcon" id="5ul-rd-ry3"/>
                                 </imageView>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" preferredMaxLayoutWidth="29" translatesAutoresizingMaskIntoConstraints="NO" id="8eW-hP-756">
-                                    <rect key="frame" x="90" y="62" width="33" height="17"/>
+                                    <rect key="frame" x="90" y="62" width="300" height="17"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title" id="mqN-bh-Xx6">
                                         <font key="font" metaFont="systemBold"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -82,6 +82,7 @@
                                 <constraint firstItem="Oou-mx-e81" firstAttribute="top" secondItem="uBc-3q-xup" secondAttribute="top" constant="20" id="kKg-G8-2U0"/>
                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Oou-mx-e81" secondAttribute="bottom" constant="15" id="kp8-yu-6Wu"/>
                                 <constraint firstAttribute="bottom" secondItem="kSf-wy-M3J" secondAttribute="bottom" constant="8" id="l0u-IY-Fvz"/>
+                                <constraint firstItem="8eW-hP-756" firstAttribute="width" secondItem="kSf-wy-M3J" secondAttribute="width" id="uF0-nA-8wn"/>
                             </constraints>
                         </customView>
                     </subviews>
