@@ -31,7 +31,7 @@ import Foundation
     }
     
     // Action code
-    open let handler: (_ action: AlertAction) -> Void
+    public let handler: (_ action: AlertAction) -> Void
 
     // A Boolean value indicating whether the action is currently enabled.
     open var isEnabled: Bool {
@@ -80,7 +80,7 @@ extension AlertAction.Style {
 // MARK: factory
 extension AlertAction {
     
-    open static func dismiss(for vC: NSViewController, title: String = "OK") -> AlertAction {
+    public static func dismiss(for vC: NSViewController, title: String = "OK") -> AlertAction {
         return AlertAction(title: title, style: .default) { (action) in
             vC.dismiss(action.button)
         }

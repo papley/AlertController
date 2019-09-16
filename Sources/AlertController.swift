@@ -46,7 +46,7 @@ open class AlertController: NSViewController {
     public init(title: String?, message: String?, preferredStyle: AlertController.Style) {
         self.message = message
         self.preferredStyle = preferredStyle
-        let nibName = NSNib.Name(rawValue: "AlertController")
+        let nibName = NSNib.Name("AlertController")
         super.init(nibName: nibName, bundle: Bundle(for: AlertController.self))
         self.title = title
     }
