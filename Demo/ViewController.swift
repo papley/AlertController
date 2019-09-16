@@ -17,7 +17,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.window?.appearance =  NSAppearance(named: NSAppearanceNameVibrantDark)
+        self.view.window?.appearance =  NSAppearance(named: NSAppearance.Name.vibrantDark)
         // Do any additional setup after loading the view.
     }
 
@@ -33,22 +33,22 @@ class ViewController: NSViewController {
         controller.add(action: AlertAction.dismiss(for: controller, title: "Ok"))
     
         controller.add(action: AlertAction(title: "Report...", style: .default) { action in
-            NSWorkspace.shared().open(URL(string: "https://github.com/phimage/AlertController/issues")!)
+            NSWorkspace.shared.open(URL(string: "https://github.com/phimage/AlertController/issues")!)
         })
         
         controller.addAction(title: "", style: .helpButton) { action in
-            NSWorkspace.shared().open(URL(string: "https://github.com/phimage/AlertController")!)
+            NSWorkspace.shared.open(URL(string: "https://github.com/phimage/AlertController")!)
         }
         
         controller.buttonsBar.color = buttonsBarColor
         controller.preferredStyle = preferredStyle
 
         controller.customizeVisualEffectView = { view in
-            view.material = NSVisualEffectMaterial.appearanceBased
+            view.material = NSVisualEffectView.Material.appearanceBased
             print(view.interiorBackgroundStyle)
         }
         
-        self.presentViewControllerAsSheet(controller)
+        self.presentAsSheet(controller)
 
         buttonsBarColor = buttonsBarColor == NSColor.red ? NSColor.clear : NSColor.red
         preferredStyle = preferredStyle == AlertController.Style.critical ? .informational : .critical
@@ -67,13 +67,15 @@ extension NSViewController {
 }
 */
 
-extension NSBackgroundStyle: CustomStringConvertible {
+extension NSView.BackgroundStyle: CustomStringConvertible {
     public var description: String {
         switch (self) {
         case .light: return "light"
         case .dark: return "dark"
         case .raised: return "raised"
         case .lowered: return "lowered"
+        case .normal: return "normal"
+        case .emphasized: return "emphasized"
         }
     }
 }
